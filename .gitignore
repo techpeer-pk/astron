@@ -1,0 +1,14 @@
+# Exclude large/non-web assets
+Images/Brochure_MFCL2700DW_EN.pdf
+Images/Pantum M7108dw.pdf
+Images/M7100-pantum-printers.pdf
+Images/IT Infrastructure & Clients/
+Images/Networking & Surveillance/
+Images/Power Backup/
+Images/Printers Scanner & Barcode/
+Docs/
+tmp/
+*.pptx
+*.zip
+.DS_Store
+Thumbs.db
