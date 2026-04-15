@@ -206,6 +206,7 @@ section{padding:96px 5%}
 .sp{color:var(--muted);font-size:.95rem;line-height:1.75;max-width:540px;margin-top:.7rem}
 
 /* ─── ABOUT ─── */
+
 #about{background:var(--dark2)}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
 @media(max-width:900px){.about-grid{grid-template-columns:1fr;gap:3rem}}
@@ -491,6 +492,39 @@ footer{
 .rv-r{opacity:0;transform:translateX(30px);transition:opacity .65s,transform .65s}
 .rv-r.on{opacity:1;transform:translateX(0)}
 
+/* ─── MOBILE MENU ─── */
+#mobileMenu{
+  display:none;
+  position:fixed;top:64px;left:0;right:0;z-index:998;
+  background:rgba(10,12,16,.98);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+  padding:1.2rem 5% 1.5rem;
+  flex-direction:column;gap:.25rem;
+}
+#mobileMenu.open{display:flex}
+#mobileMenu a{
+  color:var(--muted);font-size:1rem;font-weight:500;
+  padding:.75rem 0;
+  border-bottom:1px solid var(--border);
+  transition:color .2s;
+}
+#mobileMenu a:last-child{border-bottom:none}
+#mobileMenu a:hover{color:var(--white)}
+#mobileMenu .mob-cta{
+  margin-top:.75rem;
+  background:var(--red);color:#fff;
+  padding:.75rem;border-radius:8px;
+  text-align:center;font-weight:700;
+  border-bottom:none;
+}
+#mobileMenu .mob-cta:hover{background:var(--red-l)}
+/* Hamburger open state */
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.hamburger span{transition:transform .25s, opacity .2s}
+
 /* ─── RESPONSIVE ─── */
 @media(max-width:768px){
   .nav-links,.nav-call,.nav-cta{display:none}
@@ -650,8 +684,19 @@ footer{
     <a href="tel:+924235952334" class="nav-call">📞 +92-42-35952334</a>
     <a href="#contact" class="nav-cta">Get a Quote</a>
   </div>
-  <div class="hamburger"><span></span><span></span><span></span></div>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
 </nav>
+
+<!-- MOBILE MENU -->
+<div id="mobileMenu">
+  <a href="#services">Services</a>
+  <a href="#why">Why Us</a>
+  <a href="#clients">Clients</a>
+  <a href="#global-presence">Global Presence</a>
+  <a href="#offices">Offices</a>
+  <a href="#contact">Contact</a>
+  <a href="#contact" class="mob-cta">Get a Quote</a>
+</div>
 
 <!-- HERO -->
 <section id="hero">
@@ -1132,6 +1177,20 @@ footer{
 // Navbar scroll
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
+
+// Hamburger menu
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  mobileMenu.classList.toggle('open');
+});
+mobileMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+  });
+});
 
 // Scroll reveal
 const ro = new IntersectionObserver(entries => {
