@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Astrontech Pvt. Ltd. — IT Solutions Pakistan</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Barlow+Condensed:wght@300;400;600&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <style>
@@ -16,9 +16,9 @@
   --red-d:   #900000;
   --navy:    #034E97;
   --navy-l:  #0A6DC9;
-  --dark:    #F4F6FA;
-  --dark2:   #ECEEF5;
-  --dark3:   #E2E5EF;
+  --dark:    #F8F9FD;
+  --dark2:   #F2F4FA;
+  --dark3:   #EAECF5;
   --card:    #FFFFFF;
   --gray:    #58595B;
   --border:  rgba(0,0,0,0.09);
@@ -84,9 +84,9 @@ img{display:block;max-width:100%}
   position:absolute;inset:0;
   background:linear-gradient(
     110deg,
-    rgba(10,12,16,.97) 0%,
-    rgba(10,12,16,.88) 50%,
-    rgba(3,78,151,.25) 100%
+    rgba(10,12,16,.78) 0%,
+    rgba(10,12,16,.58) 50%,
+    rgba(3,78,151,.15) 100%
   );
 }
 /* animated scan line */
@@ -127,7 +127,8 @@ img{display:block;max-width:100%}
 
 .hero-h{
   font-size:clamp(2.8rem,5.5vw,5rem);
-  font-weight:900;line-height:1.05;letter-spacing:-2px;
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:300;line-height:1.05;letter-spacing:0px;
   animation:fu .8s .08s ease both;
 }
 .hero-h .r{color:var(--red)}
@@ -195,12 +196,12 @@ img{display:block;max-width:100%}
 /* ─── SECTION COMMONS ─── */
 section{padding:96px 5%}
 .sl{
-  font-size:.72rem;font-weight:700;color:var(--red-l);
-  text-transform:uppercase;letter-spacing:.14em;
+  font-size:1rem;font-weight:700;color:var(--red-l);
+  text-transform:uppercase;letter-spacing:.1em;
   display:flex;align-items:center;gap:.5rem;margin-bottom:.65rem;
 }
 .sl::before{content:'';width:20px;height:2px;background:var(--red);border-radius:2px;flex-shrink:0}
-.sh{font-size:clamp(1.9rem,3.5vw,2.85rem);font-weight:800;letter-spacing:-.8px;line-height:1.12;color:var(--text)}
+.sh{font-size:clamp(2.2rem,4vw,3.4rem);font-family:'Barlow Condensed',sans-serif;font-weight:300;letter-spacing:0px;line-height:1.1;color:var(--text)}
 .sh .a{color:var(--red)}
 .sh .b{color:var(--navy)}
 .sp{color:var(--muted);font-size:.95rem;line-height:1.75;max-width:540px;margin-top:.7rem}
@@ -816,7 +817,7 @@ footer{
       <div class="sc-body">
         <div class="sc-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="8" x="2" y="2" rx="2"/><rect width="20" height="8" x="2" y="14" rx="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg></div>
         <h3>IT Infrastructure</h3>
-        <p>Servers, storage, virtualization, converged & hyper-converged infrastructure, backup & recovery — full data center solutions.</p>
+        <p>Enterprise-grade servers, SAN/NAS storage, virtualization, converged & hyper-converged infrastructure, disaster recovery and complete data center design, deployment and lifecycle management.</p>
         <div class="sc-tags"><span class="tag">Dell EMC</span><span class="tag">Lenovo</span><span class="tag">Huawei</span><span class="tag">VMware</span><span class="tag">Veeam</span></div>
       </div>
     </div>
@@ -825,7 +826,7 @@ footer{
       <div class="sc-body">
         <div class="sc-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/><path d="M12 12V8"/></svg></div>
         <h3>IP / Network Solutions</h3>
-        <p>LAN, WAN, Wireless LAN, structured cabling — from proposing & designing to configuring, implementing and support.</p>
+        <p>LAN, WAN, Wireless LAN, SD-WAN, structured cabling and network monitoring — end-to-end from design and procurement to configuration, deployment and ongoing SLA-backed support.</p>
         <div class="sc-tags"><span class="tag">Cisco</span><span class="tag">Huawei</span><span class="tag">TP-Link Omada</span><span class="tag">Sangfor</span></div>
       </div>
     </div>
@@ -834,7 +835,7 @@ footer{
       <div class="sc-body">
         <div class="sc-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
         <h3>Cybersecurity Solutions</h3>
-        <p>Next-gen firewalls (NGF & WAF), IDS/IPS, WIDPS, UTMs, NACs, IAMs, load balancers, spam filters & endpoint security.</p>
+        <p>Next-gen firewalls, WAF, IDS/IPS, UTM, NAC, IAM, load balancers, spam filters, endpoint security, SIEM and NMS — comprehensive full-stack cybersecurity for enterprise and government networks.</p>
         <div class="sc-tags"><span class="tag">Fortinet</span><span class="tag">Sangfor</span><span class="tag">Trendmicro</span><span class="tag">Kaspersky</span></div>
       </div>
     </div>
@@ -843,7 +844,7 @@ footer{
       <div class="sc-body">
         <div class="sc-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg></div>
         <h3>Surveillance & Video Analytics</h3>
-        <p>Cameras to video/data storage, video walls, control centres — complete surveillance with AI-based video analytics.</p>
+        <p>IP cameras, NVR/DVR storage, video walls, control rooms, access control and AI-based video analytics — complete physical security for campuses, banks, hospitals and government facilities.</p>
         <div class="sc-tags"><span class="tag">Dahua</span><span class="tag">TP-Link</span><span class="tag">Atech</span><span class="tag">VisionLab</span></div>
       </div>
     </div>
@@ -852,7 +853,7 @@ footer{
       <div class="sc-body">
         <div class="sc-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg></div>
         <h3>UPS & Power Backup</h3>
-        <p>Solar energy solutions, UPS and converters for small, medium and large-scale projects. Local and international alliances.</p>
+        <p>Online UPS, modular UPS, solar energy systems, voltage stabilizers and converters for SMB to enterprise scale — with APC, Vertiv and local alliances, backed by full SLA support contracts.</p>
         <div class="sc-tags"><span class="tag">APC</span><span class="tag">Vertiv</span><span class="tag">Solar</span><span class="tag">Converters</span></div>
       </div>
     </div>
@@ -860,9 +861,9 @@ footer{
       <div class="sc-img"><img src="../Images/BLC Website Images/Printers.jpg" alt="Printers" loading="lazy"/></div>
       <div class="sc-body">
         <div class="sc-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></svg></div>
-        <h3>Printers, Scanners & Barcode</h3>
-        <p>Business, SMB & enterprise printing — inkjet, laser, all-in-one, scanners, and barcode/RFID solutions.</p>
-        <div class="sc-tags"><span class="tag">HP</span><span class="tag">Pantum</span><span class="tag">Brother</span><span class="tag">Zebra</span></div>
+        <h3>End User Computing & Printing</h3>
+        <p>Laptops, desktops, workstations, inkjet & laser printers, all-in-one MFPs, document scanners, barcode readers and RFID solutions — for business, SMB and enterprise productivity environments.</p>
+        <div class="sc-tags"><span class="tag">HP</span><span class="tag">Pantum</span><span class="tag">Brother</span><span class="tag">Zebra</span><span class="tag">Dell</span></div>
       </div>
     </div>
     <div class="sc rv">
@@ -870,7 +871,7 @@ footer{
       <div class="sc-body">
         <div class="sc-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
         <h3>Software & Licenses</h3>
-        <p>Microsoft, VMware, Veeam, Fortinet, Kaspersky, IceWarp, RedHat, NexaVM, Sangfor and custom ERP & business applications.</p>
+        <p>Microsoft 365, Windows Server, VMware, Veeam, Fortinet, Kaspersky, RedHat, IceWarp, NexaVM, Sangfor, custom ERP and business automation — genuine licensing, volume agreements and full compliance support.</p>
         <div class="sc-tags"><span class="tag">Microsoft</span><span class="tag">VMware</span><span class="tag">RedHat</span><span class="tag">ERP</span></div>
       </div>
     </div>
@@ -879,8 +880,17 @@ footer{
       <div class="sc-body">
         <div class="sc-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></svg></div>
         <h3>SLAs & Managed Services</h3>
-        <p>Process outsourcing, managed IT, SLA contracts for infrastructure, networking, printing, UPS & data centers across Pakistan.</p>
+        <p>Structured SLA contracts, 24/7 managed IT, NOC services, AMC and process outsourcing covering infrastructure, networking, printing, UPS and data centers — nationwide across Pakistan.</p>
         <div class="sc-tags"><span class="tag">SLA</span><span class="tag">MSP</span><span class="tag">AMC</span><span class="tag">24/7 NOC</span></div>
+      </div>
+    </div>
+    <div class="sc rv">
+      <div class="sc-img"><img src="../Images/BLC Website Images/business-and-learning-icon-on-blue-technology-background-illustration-id673266712.webp" alt="AI Adaptive Learning" loading="lazy"/></div>
+      <div class="sc-body">
+        <div class="sc-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a5 5 0 1 0 5 5"/><path d="M12 2v10"/><path d="M12 12a5 5 0 0 0 5 5"/><path d="M2 12h10"/><circle cx="19" cy="19" r="3"/><path d="m21.5 21.5-1.8-1.8"/></svg></div>
+        <h3>AI Based Adaptive Learning</h3>
+        <p>Intelligent e-learning platforms powered by AI — personalized learning paths, real-time performance analytics, adaptive assessments and corporate training management for enterprises and academic institutions.</p>
+        <div class="sc-tags"><span class="tag">AI / ML</span><span class="tag">E-Learning</span><span class="tag">LMS</span><span class="tag">Analytics</span></div>
       </div>
     </div>
   </div>
@@ -986,8 +996,8 @@ footer{
 <!-- BRANDS -->
 <section id="brands">
   <div class="br-head rv">
-    <div class="sl" style="justify-content:center">Technology Partners</div>
-    <h2 class="sh">Authorized Brands<br/>We <span class="a">Carry & Support</span></h2>
+    <div class="sl" style="justify-content:center">Our Alliances</div>
+    <h2 class="sh">Trusted Technology<br/><span class="a">Brands & Partners</span></h2>
     <p class="sp" style="margin:0 auto">Genuine products · Full manufacturer warranties · Certified reseller status</p>
   </div>
   <div class="br-grid rv">
