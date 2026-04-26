@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp \"Company Profile 0126.pptx\" \"Company Profile 0126.zip\")",
+      "Bash(mkdir -p /tmp/astron_pptx)",
+      "Bash(unzip -o \"Company Profile 0126.zip\" -d /tmp/astron_pptx)",
+      "Read(//tmp/**)",
+      "Read(//tmp/astron_pptx/**)"
+    ]
+  }
+}

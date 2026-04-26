@@ -1,0 +1,41 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls /tmp/astron_pptx/ppt/media/*.png)",
+      "Bash(ls /tmp/astron_pptx/ppt/media/*.jpeg)",
+      "Bash(cp /tmp/astron_pptx/ppt/media/image1.png \"E:/tech venture/Clients/Astron/demo/logo.png\")",
+      "Bash(cp /tmp/astron_pptx/ppt/media/image10.jpeg \"E:/tech venture/Clients/Astron/demo/cover.jpeg\")",
+      "Bash(cp /tmp/astron_pptx/ppt/media/image14.jpeg \"E:/tech venture/Clients/Astron/demo/cover2.jpeg\")",
+      "Bash(cp /tmp/astron_pptx/ppt/media/image30.jpeg \"E:/tech venture/Clients/Astron/demo/img30.jpeg\")",
+      "Bash(cp /tmp/astron_pptx/ppt/media/image33.jpeg \"E:/tech venture/Clients/Astron/demo/img33.jpeg\")",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(git remote *)",
+      "Read(//e/xampp/htdocs/astron/new/wp-content/themes\" 2>/dev/**)",
+      "Read(//e/xampp/htdocs/astron/new/wp-content/**)",
+      "Read(//e/xampp/htdocs/astron/new/**)",
+      "Read(//e/xampp/htdocs/**)",
+      "Read(//e//**)",
+      "Read(//e/tech venture/**)",
+      "Read(//c/Users/Administrator/.claude/projects/**)",
+      "PowerShell(Get-PSDrive *)",
+      "PowerShell(Get-ChildItem *)",
+      "PowerShell(cmd /c \"dir *)",
+      "PowerShell(Test-Path *)",
+      "Bash(python3 -c ' *)",
+      "Bash(grep -v \"^'0'$\\\\|^''$\\\\|^'closed'$\\\\|^'open'$\\\\|^'publish'$\\\\|^'page'$\\\\|^'inherit'$\")",
+      "Bash(grep -v \"^'0'$\\\\|^'closed'$\\\\|^'open'$\\\\|^'publish'$\\\\|^'page'$\\\\|^'post'$\\\\|^'inherit'$\\\\|^'auto-draft'$\\\\|^'trash'$\")",
+      "Bash(grep -v \"^''$\\\\|^'0'$\\\\|^'nav_menu_item'$\\\\|^'_menu_item\")",
+      "Bash(E:/xampp/php/php.exe -r ' *)",
+      "Bash(xargs -I{} basename {})",
+      "Read(//e/xampp/apache/conf/**)",
+      "Bash(git pull *)",
+      "Bash(git stash *)",
+      "Bash(git commit *)"
+    ],
+    "additionalDirectories": [
+      "E:\\xampp\\htdocs\\astron\\new"
+    ]
+  }
+}
