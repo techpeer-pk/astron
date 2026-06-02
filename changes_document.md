@@ -91,7 +91,7 @@
 | Category | Count |
 |----------|-------|
 | Already completed | **6** |
-| Pending — can start now | **27** |
+| Pending — Work in Progress | **27** |
 | Blocked — waiting on client input | **7** |
 | **Total changes** | **40** |
 
